@@ -1,0 +1,505 @@
+\documentclass[twoside]{article}
+
+% Page layout
+
+% Default layout for this size:
+% 0pt hoffset,
+% -12pt odd margin,
+% 278pt text width
+% 11pt marginparsep
+% marginparwidth 65
+
+% For the 8.5 x 11 size:
+% 0pt hoffset,
+% 19pt odd margin,
+% 430pt text width
+% 11pt marginparsep
+% marginparwidth 65
+
+\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+\setlength{\hoffset}{-0.75in} % this gives a .25in margin
+\setlength{\textwidth}{5in}
+\setlength{\voffset}{0in}
+\setlength{\textheight}{6.5in} % 1in margin at top and bottom; default text height is 430pt
+\setlength{\marginparwidth}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\usepackage{parskip}
+\usepackage{layout}
+
+\usepackage{calligra}
+\pagenumbering{gobble}
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{fontspec}
+\usepackage{dashrule}
+\usepackage{tabularx}
+\usepackage{tabu}
+
+\usepackage[urw-garamond]{mathdesign}
+\usepackage[T1]{fontenc}
+
+% Alternative: EB Garamond
+% \usepackage[cmintegrals,cmbraces]{newtxmath}
+% \usepackage{ebgaramond-maths}
+% \usepackage[T1]{fontenc}
+
+
+\definecolor{ourblue}{rgb}{0,0.16,0.48}
+
+\newcommand{\hone}[1]{{\centering \Huge\scshape #1
+
+\bigskip
+
+}}
+
+\newcommand{\htwo}[1]{{\Large\scshape #1}}
+\newcommand{\masspart}[1]{\bigskip
+
+  \htwo{#1}}
+\newcommand{\masssubpart}[1]{\bigskip
+
+  {\large\scshape #1}}
+\newcommand{\marriagepart}[1]{{\large\scshape #1}}
+\newcommand{\note}[1]{{\centering \textit{#1}}}
+\newcommand{\sayline}[2]{
+  \begin{tabularx}{\textwidth}{@{} r X @{}}
+    \makebox[6.0em][r]{\textit{#1:}} & \textit{#2}
+\end{tabularx}\\}
+\newcommand{\mycal}[1]{\textcalligra{#1}}
+
+\newcommand{\cparbox}[2]{\parbox{#1}{\centering #2}}
+\newcommand{\partytitle}[1]{{\Large  {\mycal{#1}}}}
+\newcommand{\partyname}[1]{{\footnotesize \textsc{#1}}}
+\newcommand{\partyline}[2]{\partyname{#1 \linesep{} #2}}
+\newcommand{\linesep}{\raisebox{1.1pt}{\fontsize{4pt}{4.8pt}\fontspec{wmdividers1.TTF}p}} % other good letters: r, s, P, y, N
+\newcommand{\psep}{\bigskip{\fontspec{wmdividers1.TTF}p}\bigskip}
+
+\newcommand{\songlisting}[2]{\textit{#1}\hdashrule{\fill}{1pt}{1pt}#2\\}
+\newcommand{\reading}[2]{#1\hdashrule{\fill}{1pt}{1pt}#2}
+\newcommand{\readingquote}[1]{
+\begin{quote}
+``\textit{#1}''
+\end{quote}
+}
+\newcommand{\inputmusic}[1]{\parbox{\textwidth}{\input{#1}}}
+%\newcommand{\inputmusic}[1]{\input{#1}}
+\newenvironment{keeptogether}{\begin{minipage}{\textwidth}}{\end{minipage}}
+%\newenvironment{keeptogether}{}{}
+
+\newcommand{\fontsizephrase}{John Smith}
+\newcommand{\fontsizetest}{
+  tiny: {\tiny \fontsizephrase}\\
+  scriptsize: {\scriptsize \fontsizephrase}\\
+  footnotesize: {\footnotesize \fontsizephrase}\\
+  small: {\small \fontsizephrase}\\
+  normalsize: {\normalsize \fontsizephrase}\\
+  large: {\large \fontsizephrase}\\
+  Large: {\Large \fontsizephrase}\\
+  LARGE: {\LARGE \fontsizephrase}\\
+  huge: {\huge \fontsizephrase}\\
+  Huge: {\Huge \fontsizephrase}\\
+}
+
+\newcommand{\dividertest}{
+  {\fontspec{beaver.ttf}
+abcde
+
+fghij
+
+klmno
+
+pqrst
+
+uvwxy
+
+z
+
+ABCDE
+
+FGHIJ
+
+KLMNO
+
+PQRST
+
+UVWXY
+
+Z
+}
+}
+
+\begin{document}
+
+% Shows the page layouts, with measurements and all
+%\layout
+
+\color{ourblue}
+
+% \fontsizetest
+
+% \dividertest
+
+\vspace*{\fill}
+
+{\centering
+
+\textsc{The Wedding Liturgy Uniting}
+
+{\Huge
+\mycal{Jane Amanda Smith}\\
+\mycal{\&}\\ \medskip
+\mycal{John Patrick Smith}
+}
+
+\textsc{in the Sacrament of Holy Matrimony}
+
+\vspace{3em}
+\psep
+\vspace{3em}
+
+\textsc{
+Tenth of October\\ \medskip
+Two Thousand Fifteen\\ \medskip
+Two O'Clock in the Afternoon\\ \medskip
+The Shrine Church of Saint Stanislaus\\ \medskip
+Cleveland, Ohio}
+
+}
+
+\vspace*{\fill}
+\newpage
+
+% intentionally blank inside the cover
+\null
+
+\newpage
+
+{\centering
+
+  \hone{The Wedding Party}
+
+  \vspace{1em}
+
+  \begin{tabu} to \textwidth {@{} X[c] X[c] @{}}
+    \noindent \partytitle{Parents of the Bride} \linebreak
+    \noindent \partyname{John and Jane Smith}
+  &
+    \partytitle{Parents of the Groom} \linebreak
+    \noindent \partyname {John and Jane Smith}
+  \\ \noalign{\bigskip} % smallskip, medskip, bigskip
+    \partytitle{Grandmother of the Bride} \linebreak
+    \partyname{Jane Smith}
+  &
+    \partytitle{Grandparents of the Groom} \linebreak
+    \partyname{John and Jane Smith}
+  \\ \noalign{\bigskip}
+  \partytitle{Maid \& Matron of Honor}\linebreak
+  \partyline{Jane Smith}{Sister of the Bride}\linebreak
+   \partyline{Jane Smith}{Sister of the Bride}
+
+    \bigskip
+
+    \partytitle{Bridesmaids}\linebreak
+    \partyname{Jane Smith \linesep{} Friend of the Bride}\linebreak
+    \partyname{Jane Smith \linesep{} Friend of the Bride}\linebreak
+    \partyname{Jane Smith \linesep{} Friend of the Bride}\linebreak
+    \partyname{Jane Smith \linesep{} Friend of the Bride}
+  &
+  %\centering
+    \partytitle{Best Man}\linebreak \partyname{John Smith \linesep{} Cousin of the Groom}
+
+    \bigskip
+
+    \partytitle{Groomsmen \& Groomswoman}\linebreak
+    \partyname{John Smith \linesep{} Friend of the Groom}\linebreak
+    \partyname{Jane Smith \linesep{} Friend of the Groom}\linebreak
+    \partyname{John Smith \linesep{} Friend of the Groom}\linebreak
+    \partyname{John Smith \linesep{} Friend of the Groom}\linebreak
+    \partyname{John Smith \linesep{} Brother of the Bride}
+  \\ \noalign{\bigskip}
+\end{tabu}
+
+\partytitle{Celebrant}\\
+\partyline{Father John Smith}{Friend of the Bride's Family}
+\medskip
+
+    \partytitle{Lectors}\\
+    \partyline{Jane Smith}{Sister of the Groom}\\
+    \partyline{Jane Smith}{Sister of the Groom}
+    \medskip
+
+    \partytitle{Petitioners \& Gift Bearers}\\
+    \partyline{Jane Smith}{Friend of the Bride}\\
+    \partyline{Jane Smith}{Friend of the Groom}
+    \medskip
+
+    \partytitle{Musician}\\
+    {\footnotesize \textsc{John Smith}}
+
+\psep
+
+\note{It is our hope that you will join us in participating ``in full heart and voice,'' using this program as a guide for our music selections and the responses from the newest (third) edition of the Roman Missal.}
+
+} % end centering
+
+\newpage
+
+\hone{The Nuptial Mass}
+
+\masspart{Entrance Rite}
+
+\masssubpart{Processional}
+
+\songlisting{Canon in D}{Pachelbel}\\
+\songlisting{Cello Suite No. 1, adapted for organ}{Bach}
+
+\masssubpart{Greeting}
+
+\sayline{Priest}{In the name of the Father, and of the Son, and of the Holy Spirit.}
+\sayline{All}{Amen.}
+\sayline{Priest}{The Lord be with you.}
+\sayline{All}{And with your spirit.}
+
+\masssubpart{Gloria}
+
+\inputmusic{sample}
+
+\masssubpart{Opening Prayer}
+
+\newpage
+
+\masspart{Liturgy of the Word}
+
+\note{The Roman Catholic Mass is divided into two main parts, the Liturgy of the Word and the Liturgy of the Eucharist.
+In the Liturgy of the Word, we receive the Scriptures.
+In the Liturgy of the Eucharist, we receive the Sacrament of Holy Communion.}
+
+\masssubpart{First Reading (please be seated)}
+
+\reading{Tobit 8:4b--8}{Jane Smith}
+\readingquote{Call down your mercy on me and on her, and allow us to live together to a happy old age.}
+
+\masssubpart{Responsorial Psalm}
+
+\songlisting{Blest are Those who Love You}{Haugen}
+
+\inputmusic{sample}
+
+\masssubpart{Second Reading}
+
+\reading{Philippians 4:4--9}{Jane Smith}
+\readingquote{Rejoice in the Lord always. I shall say it again: rejoice!}
+
+\newpage
+\masssubpart{Gospel Acclamation (please stand)}
+\medskip
+
+\songlisting{Celtic Alleluia}{O'Carroll}
+
+\inputmusic{sample}
+
+\masssubpart{Gospel}
+
+\reading{Matthew 5:1--12a}{Fr. John Smith}
+\readingquote{Blessed are the poor in spirit, for theirs is the kingdom of heaven.}
+
+\masssubpart{Homily (please be seated)}
+\bigskip
+
+\begin{center}\psep\end{center}
+
+\begin{center}
+\masspart{Rite of Marriage}
+
+\bigskip
+%\begin{center}
+\marriagepart{Prayer over the Couple}\\
+\marriagepart{Statement of Intentions}\\
+\marriagepart{Consent and Exchange of Vows}\\
+\marriagepart{Blessing and Exchange of Rings}
+\end{center}
+\bigskip
+
+\begin{center}\psep\end{center}
+
+\masssubpart{Prayer of the Faithful}
+
+\sayline{Response}{Lord, hear our prayer.}
+
+\newpage
+
+\masspart{Liturgy of the Eucharist}
+
+\note{In the Liturgy of the Eucharist, we prepare and receive the Sacrament of Holy Communion in the sharing of consecrated bread and wine, at the command of Jesus Christ in his Last Supper.}
+
+\masssubpart{Presentation and Preparation of the Gifts}
+
+\songlisting{Jesu, Joy of Man's Desiring}{Bach}
+
+\masssubpart{Prayer over the Gifts (please stand)}
+
+\sayline{Priest}{Pray, brothers and sisters that my sacrifice and yours may be acceptable to God, the almighty Father.}
+\sayline{All}{May the Lord accept the sacrifice at your hands for the praise and glory of his name, for our good, and the good of all his holy Church.}
+
+\masspart{Eucharistic Prayer}
+
+\sayline{Priest}{The Lord be with you.}
+\sayline{All}{And with your spirit.}
+\sayline{Priest}{Lift up your hearts.}
+\sayline{All}{We lift them up to the Lord.}
+\sayline{Priest}{Let us give thanks to the Lord, our God.}
+\sayline{All}{It is right and just.}
+
+\newpage
+
+\begin{keeptogether}
+\masssubpart{Sanctus}\medskip
+
+\inputmusic{sample}
+\medskip
+
+\masssubpart{(please kneel or be seated)}
+\end{keeptogether}
+
+\masssubpart{Memorial Acclamation}
+
+\inputmusic{sample}
+
+\masssubpart{Great Amen}
+
+\inputmusic{sample}
+
+\masssubpart{(please stand)}
+
+\begin{keeptogether}
+\masssubpart{Lord's Prayer}\medskip
+
+\inputmusic{sample}
+\end{keeptogether}
+\bigskip
+
+\sayline{Priest}{Deliver us Lord, we pray, from every evil, graciously grant us peace in our days, that, by the help of your mercy, we may be always free from sin and safe from all distress, as we await the blessed hope and the coming of our Savior, Jesus Christ.}
+
+\inputmusic{sample}
+
+\newpage
+
+\masssubpart{Nuptial Blessing}
+
+%\begin{keeptogether}
+\masssubpart{Sign of Peace}
+
+\sayline{Priest}{The Peace of the Lord be with you always.}
+\sayline{All}{And with your spirit.}
+\sayline{Priest}{Let us offer each other a sign of peace.}
+
+\note{You are invited to exchange a sign of peace with one another by shaking hands or embracing while saying, "Peace be with you."}
+%\end{keeptogether}
+
+\masssubpart{Lamb of God}
+
+\inputmusic{sample}
+
+\masssubpart{(please kneel or be seated)}
+
+\masssubpart{Communion}
+
+\sayline{Priest}{Behold the Lamb of God, behold him who takes away the sins of the world. Blessed are those called to the supper of the Lamb.}
+\sayline{All}{Lord, I am not worthy that you should enter under my roof, but only say the word and my soul shall be healed.}
+
+\note{We invite all non-Catholics to come forward during Communion with arms crossed across their chest to receive a blessing.}
+
+\newpage
+\songlisting{The Servant Song}{Gillard}
+
+\inputmusic{sample}
+
+\masssubpart{Prayer After Communion}
+
+\masssubpart{Marian Devotion}
+
+\note{The bride and groom ask for the Virgin Mary's blessing by offering a bouquet of flowers at a shrine near the altar and asking her to pray for their strong and happy marriage.}
+
+\songlisting{Notre Dame, Our Mother (instrumental)}{Casasanta}
+
+\vspace{-1.5em}
+\masssubpart{Closing Prayer and Final Blessing}
+
+\masssubpart{Recessional}
+
+\songlisting{Cantata No. 29}{Bach}
+
+\newpage
+
+\begin{center}
+\hone{Reception Information}
+
+We invite you all to our wedding reception at the Cleveland Arcade:
+
+\textbf{401 Euclid Ave\\
+Cleveland, OH 44114}
+
+The cocktail hour starts at 6pm, followed by cake-cutting at 6:50 and dinner at 7.
+
+For our Fighting Irish fans in attendance, the Notre Dame vs. Navy game will be shown at 1890 Bar \& Lounge, on the second floor of the Arcade.
+
+\bigskip
+
+\htwo{Driving Directions to the Arcade}
+
+\begin{itemize}
+\item From the parking lot of the church, turn right onto Baxter, then left at the end of the road on Broadway.
+\item Continue on Broadway/OH-14 W/OH-43 W for close to 3 miles.
+\item Turn right onto OH-14/OH-43, then use the left 2 lanes to turn left at the first cross street onto US-422 W.
+\item Follow US-422 W for 1 mile, turn right onto S Roadway, then use the middle lane to immediately turn left onto US-20 W/E Roadway, then right onto US-322 E/US-6 E/Superior Ave.
+\item The Arcade will be on your right.
+\end{itemize}
+
+\bigskip
+
+The Arcade has valet parking, and there are multiple garages around the area as well.
+If you are staying at the Hampton, it is down the street (just 500 feet!) from the Arcade.
+\end{center}
+
+\newpage
+
+\hone{In Our Hearts}
+
+\centering
+
+A number of our close loved ones have either passed on or were otherwise unable to attend today, but we wish to acknowledge the profound effects they have had on us and our families. We love you all.
+
+\partyline{John and Jane Smith}{Grandparents of the Bride}
+
+\partyline{John Smith}{Grandfather of the Bride}
+
+\partyline{John and Jane Smith}{Grandparents of the Groom}
+
+\bigskip
+\begin{center}
+\psep
+\end{center}
+\bigskip
+
+\begin{center}
+  \hone{Thank you}
+\end{center}
+
+Thank you all for coming to celebrate the beginning of our marriage with us. We consider ourselves very blessed to count such wonderful people as our friends and family.
+
+% 2 intentionally blank pages inside of back cover
+\newpage
+\null
+\newpage
+\null
+
+\newpage
+\null
+\vfill
+
+Produced with \LaTeX.
+
+Inspired by the work of Andrew and Alyssa Jones.
+
+\end{document}

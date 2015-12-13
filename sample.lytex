@@ -1,0 +1,40 @@
+\begin{lilypond}[line-width=5in,staffsize=16]
+
+#(define (override-color-for-all-grobs color)
+  (lambda (context)
+   (let loop ((x all-grob-descriptions))
+    (if (not (null? x))
+     (let ((grob-name (caar x)))
+      (ly:context-pushpop-property context grob-name 'color color)
+      (loop (cdr x)))))))
+
+\applyContext #(override-color-for-all-grobs (rgb-color 0 0.16 0.48))
+
+\layout {
+  \context {
+    \Score
+    \omit BarNumber
+  }
+}
+
+\relative c' {
+  \numericTimeSignature
+  \time 4/4
+  \key f \major
+
+  % Mary had a
+  e d c d
+  % little lamb, its
+  e e e e
+  % fleece was white as
+  d d e d
+  % snow
+  c1
+}
+\addlyrics {
+  Ma -- ry had a lit -- tle lamb, its fleece was white as snow.
+}
+
+\version "2.18.2"  % necessary for upgrading to future LilyPond versions.
+
+\end{lilypond}
