@@ -54,3 +54,13 @@ restricted copyright, I've changed that here to use the calligra package.
 
 The divider decoration came from the wmdividers1 font, found here:
 http://www.fontspace.com/willymac/wmdividers1/20578.charmap
+
+Derived Programs
+================
+
+You may find these other programs based on mine to be useful, too:
+
+* https://github.com/LBreda/libretto-matrimonio (by Lorenzo Breda)
+
+If you use my code to make your own program, I'd be happy to add you to this
+list!
